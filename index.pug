@@ -1,0 +1,480 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='apple-touch-icon' sizes='180x180' href='/assets/apple-touch-icon.c9a4c9cc.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='data:image/png;base64,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')
+    link(rel='icon' type='image/png' sizes='16x16' href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABZVBMVEUKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoJCQoIBwoJCAoNDgkpNQkXHAkNDwkREwkpNAmGsgc7TAhDWAhTbQhFWQgZHgkHBgo2RgmYygZtkQdpiwdwlAdYdAhLYwie0wZCVghkgwdmhweJtwd6oQcKCwlQagij2QZUbgh1mweJtgeg1QaFsAdKYQim3gaXyQap4Qaz7waLuQeAqgc+UQgGBQpPaAi59wa9/Qa8+wa7+Qal3AabzgZBVAgKCglylwe28wa39Qat5wad0Qa28gZGWwgTFgmSwgZXcghoige6+AZWcQgoMwmq4wZZdggRFAk7TQgwPQms5gYdJAmp4gZlhgcICApniAdxlge49gZwlQdukgdPZwglLwmg1ga//wW8/Aa+/QYYHgk1RQmQvwem3QZ2nAcfJwkUGAknMgkgKAkMDQkHBwr///9nX614AAAAEHRSTlMSie3uixOK+o3s74z7j/AUVZzJBAAAAAFiS0dEdjFjyUEAAAAHdElNRQflCxoWNAhvcwJ8AAAA1klEQVQY02NgYGQSEBQSFhQWFBAQYGZhZWBjFxAUERUTF5MACbFzMHAKCAhJSknLyMrJg9UwAAkFRSVpZRVVNZCAAFhAXUNTS1tHV1JPECqgb2BoZGxiKiMIEzAzt7C0sraxFYJqsbN3cHRydnF1U4AICLp7eHo5efv4+tlBBfwDAoOCQ0LDwmEqIqwjo6KjYmLjYALxCdaJSckpDqlQAQGhtPQMp8ws42xhkAAnSElOrndefgHIVi4GbnagiFBhUXFJPJDPw8vAysEHZAiXCoF8wsfLDwBQRiZ2X5BwEwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0xMS0yNlQyMjo1MjowOCswMDowMOnjA/EAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMTEtMjZUMjI6NTI6MDgrMDA6MDCYvrtNAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC')
+    link(rel='manifest' href='data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiIzBhMGEwYSIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMGEwYTBhIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K')
+    link(rel='mask-icon' href='/assets/safari-pinned-tab.19ba68fe.svg' color='#5bbad5')
+    meta(name='msapplication-TileColor' content='#0a0a0a')
+    meta(name='theme-color' content='#0a0a0a')
+    title Chuhao Chin - A Graphic Designer
+    meta(name='description' content="Hey, I'm Chuhao Chin, a 24 years old Graphic Designer, I'm now freelance and ready to work on your next project!")
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-8JTW04PMHP')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-8JTW04PMHP');
+    script(type='module' crossorigin='' src='/assets/vendor.eecb4af8.js')
+    script(type='module' crossorigin='' src='/assets/app.3489eab2.js')
+    link(rel='stylesheet' href='app.952f767f.css')
+  body#mainPage
+    .l__preloader
+      .preloader__roll
+        p
+          | STUFF IS LOADING, PLEASE WAIT
+          | STUFF IS LOADING, PLEASE WAIT
+          | STUFF IS LOADING, PLEASE WAIT
+        p
+          | STUFF IS LOADING, PLEASE WAIT
+          | STUFF IS LOADING, PLEASE WAIT
+          | STUFF IS LOADING, PLEASE WAIT
+    .preloader__subline
+    .preloader__blackline
+    .l__navbar
+      .navbar__logo
+        h2 金主昊 Chuhao Chin
+      a.navbar__availability--link(href='mailto:chuhaochin@gmail.com')
+        .navbar__availability
+          p
+            |   品牌識別、活動主視覺設計、包裝、印刷品
+            span.dot
+            |                     BRAND IDENTITY, KEY VISUAL DESIGN, PACKAGING, PRINTED MATTER
+            span.dot
+          p
+            |   品牌識別、活動主視覺設計、包裝、印刷品
+            span.dot
+            |                     BRAND IDENTITY, KEY VISUAL DESIGN, PACKAGING, PRINTED MATTER
+            span.dot
+     
+      .navbar__links
+        a.menu-item(href='')
+          div
+            span.menu-item-text
+              | PROJECTS
+        a.menu-item(href='')
+          div
+            span.menu-item-text
+              | ABOUT
+        a.menu-item(href='')
+          div
+            span.menu-item-text
+              | CONTACT
+      img.mobile-only.hamburger__menu(src='/assets/hamburger.693fd2ab.svg' alt='Menu')
+      .menu__mobile.mobile-only
+        h3.menu__mobile--close
+          | CLOSE
+        .menu__mobile--content
+          a.menu-item.mobile__menu--item(href='')
+            div
+              span.menu-item-text
+                | PROJECTS
+          a.menu-item.mobile__menu--item(href='')
+            div
+              span.menu-item-text
+                | ABOUT
+          a.menu-item.mobile__menu--item(href='')
+            div
+              span.menu-item-text
+                | CONTACT
+    #app(asscroll-container='')
+      .l__content(data-template='mainPage')
+        .l__landing
+          .landing__centered-content
+            h2.landing__centered-content__title.title_top
+              | INDEPENDANT
+            h2.landing__centered-content__title.title_middle
+              | GRAPHIC
+            h2.landing__centered-content__title.title_bottom
+              | DESIGNER
+            
+          
+          .landing__bottom-content
+            .landing__bottom-content__networks
+              a.menu-item(rel='noreferrer' target='_blank' href='https://www.instagram.com/chu___design/')
+                div
+                  span.menu-item-text
+                    | INSTAGRAM
+              a.menu-item(rel='noreferrer' target='_blank' href='https://www.facebook.com/chuhaochin')
+                div
+                  span.menu-item-text
+                    | FACEBOOK
+            .landing__bottom-content__scroll
+              p
+                | SCROLL TO BEGIN YOUR JOURNEY
+                span
+                  img(src='/assets/arrow-right.4276067b.svg' alt='Arrow right')
+        .mobile__separator.landing__separator--mobile
+          .mobile__separator--container
+            p Chuhao Chin    
+            p  PORTFOLIO    
+            p Chuhao Chin    
+            p  PORTFOLIO  
+          .mobile__separator--container
+            p Chuhao Chin    
+            p  PORTFOLIO    
+            p Chuhao Chin    
+            p  PORTFOLIO    
+        .l__separator.desktop-only
+          .separator__top
+            p.separator__text
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+          .separator__bottom
+            p.separator__text
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+              span Chuhao Chin
+              span PORTFOLIO
+        .l__projects.section
+          .projects__introduction
+            h2.projects__introduction__title.serif-font SELECTED
+            h2.projects__introduction__title.serif-font WORKS
+          .projects__container
+            .project__item(data-src='projects/IGLOBEMYS.html')
+              a(href='projects/IGLOBEMYS.html')
+                h2.project__item__title IGLOBE X MYS
+                picture
+                  img.project__item__img(src='/img/IGLOBE/allmockup.jpg' alt='IGLOBE')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='projects/securenet.html')
+              a(href='projects/securenet.html')
+                h2.project__item__title 嘿！別亂點 Do not press
+                picture
+                  
+                  img.project__item__img(src='/img/securenet/securenet1.jpg' alt='嘿！別亂點 Do not press')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='projects/Reappearance of contemporary Art Deco.html')
+              a(href='projects/Reappearance of contemporary Art Deco.html')
+                h2.project__item__title Reappearance of <br>contemporary Art Deco
+                picture
+                
+                  img.project__item__img(src='/img/goldman/goldman.jpg' alt='Reappearance of contemporary Art Deco')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='projects/TAECT 2021.html')
+              a(href='projects/TAECT 2021.html')
+                h2.project__item__title TAECT 2021
+                picture
+                  
+                  img.project__item__img(src='/img/TAECT2021.jpg' alt='TAECT 2021')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='/projects/2021 tapani Festival.html')
+              a(href='projects/2021 tapani Festival.html')
+                h2.project__item__title 2021 噍吧哖文化生活節
+                picture
+                  
+                  img.project__item__img(src='/img/tapani.jpg' alt='tapani')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            
+            .project__item(data-src='projects/Dragon Boat Festival.html')
+              a(href='projects/Dragon Boat Festival.html')
+                h2.project__item__title Dragon Boat Festival Poster 端午海報
+                picture
+               
+                  img.project__item__img(src='/img/DGfestival.jpg' alt='DGfestival')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+      
+           
+           
+            .project__item(data-src='https://www.youtube.com/watch?v=rhVQw6Qhktg&t=12s' target='_blank')
+              a(href='https://www.youtube.com/watch?v=rhVQw6Qhktg&t=12s' target='_blank')
+                h2.project__item__title 關懷科技議題＿yeetalk
+                picture
+              
+                  img.project__item__img(src='/img/yeetalk.png' alt='yeetalk')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='https://www.youtube.com/watch?v=rFyD9ek5sVo&t=19s' target='_blank')
+              a(href='https://www.youtube.com/watch?v=rFyD9ek5sVo&t=19s')
+                h2.project__item__title 糖衣陷阱
+                picture
+              
+                  img.project__item__img(src='img/sugartrap.png' alt='糖衣陷阱')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+            .project__item(data-src='https://youtu.be/3rnPqfiji3U' target='_blank')
+              a(href='https://youtu.be/3rnPqfiji3U' target='_blank')
+                h2.project__item__title 關懷失智症
+                picture
+              
+                  img.project__item__img(src='/img/失智症.jpg' alt='關懷失智症')
+                h3.project__item__hover
+                  | SEE PROJECT 
+                  img(src='/assets/arrow-project.75563078.svg' alt='Arrow Right')
+           
+            
+            
+        .about__separator.desktop-only
+          p
+            | KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+            |                     KNOW MORE ABOUT ME
+            span .
+        .mobile__separator
+          .mobile__separator--container
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+          .mobile__separator--container
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+            p KNOW MORE ABOUT ME   
+        .l__about.section
+          .about__introduction
+            .about__networks
+              a.menu-item(rel='noreferrer' target='_blank' href='https://www.instagram.com/chu___design/')
+                div
+                  span.menu-item-text
+                    | INSTAGRAM
+              
+              a.menu-item(rel='noreferrer' target='_blank' href='https://www.facebook.com/chuhaochin')
+                div
+                  span.menu-item-text
+                    | FACEBOOK
+            .about__introduction__content.desktop-only.line
+              h2.about__introduction__title
+                 
+                | Hi! This is 
+                span.name Chuhao Chin,
+    
+              h2.about__introduction__title
+               
+                | A freelance Graphic Designer. 
+
+              h2.about__introduction__title
+                 
+                | 
+                span.space
+                span.space 哈囉，我是金主昊 
+              
+    
+              h2.about__introduction__title
+              
+                | 我是一個設計自由接案者。
+              br
+              br
+              br
+            .about__introduction__content.desktop-only.cssmove1
+              svg#pic1(viewbox="-50 -50 100  100")
+                line(x1=-20 y1=0 x2=20 y2=0)
+                line(x1=0 y1=-20 x2=0 y2=20)
+                circle(cx=0 cy=0 r=10)
+                  animate(attributeName="r" dur="2s" values="10;20;10" repeatCount="indefinite")
+      
+    
+              
+                
+
+             
+                
+            .about__introduction__content.mobile-only
+              h2.about__introduction__title
+                span.serif-font Hi! 
+                | This is Chuhao Chin. A freelance Graphic Designer.
+                br
+                | 哈囉，我是金主昊，我是一個設計自由接案者。
+            .about__introduction__picture
+              picture
+                source(srcset='/assets/personal.84647320.webp ' type='image/webp')
+                img(src='/assets/personal.21c0eabe.jpg' alt='Picture of me')
+            .about__introduction__line
+          .about__me__content
+            .about__me__content--left
+              p#amcl-1.about__me__content--text
+                | I executed many projects of Cultural Affairs Bureau in Taiwan,
+                | The types of projects I accept include Graphic Design related,
+                | such as Key visions, posters, 
+                | illustrations, branding and other printed materials. I also design simple motion graphics, animations.
+              .cssmove2
+                svg#pic2(viewbox="-50 -50 100  100")
+                    circle(cx=0 cy=0 r=10)
+                    g
+                      line(x1=-20 y1=0 x2=20 y2=0)
+                      line(x1=0 y1=-20 x2=0 y2=20)
+                      rect(x=-20 y=-20 width=40 height=40)
+                      animateTransform(attributeName="transform" type="rotate" dur="2s" values="0;360" repeatCount="indefinite")
+
+            
+            .about__me__content--right
+              .about__me__content--right__container
+                p.about__me__content--text
+                  | 我接過一些台灣政府文化局的案子，
+                  | 我有接的專案類型是平面相關如主視覺、
+                  | 海報、插畫、品牌、印刷物，
+                  | 另外也接一些簡單動態視覺、動畫。
+
+          .mobile__separator.landing__separator--mobile
+            .mobile__separator--container
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+            .mobile__separator--container
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+              p
+                span & Wanna  
+                | Try? 
+          .about__benefits
+            .about__benefits__top-text
+              | 有想要設計的東西嗎？想了解更多，快來聯絡我！  (╯✧∇✧)╯
+            .cssmove3
+              svg#pic3(viewbox="0 0 200 200")
+                circle(cx=0 cy=50 r=3)
+                  animate(attributeName="cy" dur="2s" values="50;60;50" repeatCount="indefinite")
+                circle(cx=50 cy=80 r=3)
+                  animate(attributeName="cy" dur="2s" values="80;40;80" repeatCount="indefinite")
+                circle(cx=100 cy=60 r=3)
+                  animate(attributeName="cy" dur="2s" values="60;30;60" repeatCount="indefinite")
+                circle(cx=150 cy=20 r=3)
+                  animate(attributeName="cy" dur="2s" values="20;70;20" repeatCount="indefinite")
+                circle(cx=200 cy=40 r=3)
+                  animate(attributeName="cy" dur="2s" values="40;60;40" repeatCount="indefinite")
+                  
+                polyline(points="0,50 50,80 100,60 150,20 200,40")
+                  animate(attributeName="points" dur="2s" values="0,50 50,80 100,60 150,20 200,40;0,60 50,40 100,30 150,70 200,60;0,50 50,80 100,60 150,20 200,40" repeatCount="indefinite")
+            .cssmove4 
+                svg#pic4(viewbox="0 0 200 200")
+                    rect(x=0 y=100 width=20 height=200)
+                      animate(attributeName="y" begin="0s" dur="2s" values="100;0;100"  repeatCount="indefinite")
+                    rect(x=30 y=80 width=20 height=200)
+                      animate(attributeName="y" begin="0.3s" dur="2s" values="80;0;80"  repeatCount="indefinite")
+                    rect(x=60 y=60 width=20 height=200)
+                      animate(attributeName="y" begin="0.6s" dur="2s" values="60;0;60"  repeatCount="indefinite")
+                    rect(x=90 y=40 width=20 height=200)
+                      animate(attributeName="y" begin="0.9s" dur="2s" values="40;0;40"  repeatCount="indefinite")
+                    rect(x=120 y=80 width=20 height=200)
+                      animate(attributeName="y" begin="1.2s" dur="2s" values="80;0;80"  repeatCount="indefinite")
+                    rect(x=150 y=120 width=20 height=200)
+                      animate(attributeName="y" begin="1.5s" dur="2s" values="120;0;120"  repeatCount="indefinite")
+                    rect(x=180 y=140 width=20 height=200)
+                      animate(attributeName="y" begin="1.8s" dur="2s" values="140;0;140"  repeatCount="indefinite")
+         
+              
+            
+            
+                
+            
+            .about__benefits__bottom-band
+              h2
+                span & Wanna  
+                | Try? 
+                span & Wanna  
+                | Try? 
+                span & Wanna  
+                | Try? 
+                span & Wanna  
+                | Try? 
+                span & Wanna  
+                | Try?  
+                span & Wanna  
+                | Try? 
+        .l__contact.section
+          .contact__container-top
+            h2.contact__title
+              span C
+              span h
+              span u 
+              span h 
+              span a
+              span o&nbsp;
+              span C
+              span h
+              span i
+              span n
+            .contact__container-top-row
+              .contact__form
+                h2.contact__form--title WANT TO DISCUSS A NEW PROJECT?
+                a.menu-item.contact__form--button(href='mailto:heymanshenri@gmail.com')
+                  div
+                    span.menu-item-text
+                      | Send me an E-Mail
+              img.backToStart(src='/assets/start.55746001.svg' alt='Back to start')
+          img.mobile-only.contact-character
+            
+          .contact__container-bottom
+            .contact__thanks
+              h3 Thanks for your visit!
+              p You can check out my networks to follow my new adventures!
+            .contact__networks-design
+              .contact__networks
+                a.menu-item(rel='noreferrer' target='_blank' href='https://www.instagram.com/chu___design/')
+                  div
+                    span.menu-item-text
+                      | INSTAGRAM
+               
+                a.menu-item(rel='noreferrer' target='_blank' href='https://www.facebook.com/chuhaochin')
+                  div
+                    span.menu-item-text
+                      | FACEBOOK
+              .contact__design
+                p
+                  | DESIGNED BY 
+                  a(rel='noreferrer' target='_blank' href='https://clarissemichard.com/') CLARISSE MICHARD
+        .contact
+          
+        .contact__footer.mobile-only
+          .designer
+            p
+              | DESIGNED BY 
+              a(rel='noreferrer' target='_blank' href='https://clarissemichard.com/')
+                | CLARISSE
+                | MICHARD
+          .backToStart
+            img(src='/assets/arrow-right.4276067b.svg' alt='Back to start')
